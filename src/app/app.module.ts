@@ -4,31 +4,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
 import { LoginComponent} from './login/login.component';
 import { AuthService} from './services/auth.service';
 
-
-
-@NgModule({
-    declarations: [
-    AppComponent,
-    LoginComponent
-    ],
-=======
 import { ListActivityComponent } from './list-activity/list-activity.component';
-<<<<<<< HEAD
-=======
 import {ActivityService} from './services/activity.service';
 import {EmployeeService}  from './services/employee.service';
->>>>>>> master
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListActivityComponent
+    ListActivityComponent,
+    LoginComponent
   ],
->>>>>>> master
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -38,16 +28,11 @@ import {EmployeeService}  from './services/employee.service';
 
   ],
   providers: [
-    AuthService
-  ],
-<<<<<<< HEAD
-=======
-  providers: [
+    AuthService,
     ActivityService,
     EmployeeService
 
   ],
->>>>>>> master
   bootstrap: [AppComponent]
 })
 export class AppModule { }
