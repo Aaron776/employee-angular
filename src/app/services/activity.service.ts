@@ -21,4 +21,24 @@ export class ActivityService {
       })
     );
   }
+
+  getActivityById(id: string): Observable<any> {
+    return this.http.get(this.api + '/' + id).pipe(
+      map(response => response),
+      catchError(error => {
+        alert(error.error);
+        return error;
+      })
+    );
+  }
+
+  updateActivity(id: string, activity: ActivityModel): Observable<any> {
+    return this.http.put(this.api + '/' + id, activity).pipe(
+      map(response => response),
+      catchError(error => {
+        alert(error.error);
+        return error;
+      })
+    );
+  }
 }
