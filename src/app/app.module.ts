@@ -1,25 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListActivityComponent } from './list-activity/list-activity.component';
-import {ActivityService} from './services/activity.service';
-import {EmployeeService}  from './services/employee.service';
+import { LoginComponent} from './login/login.component';
+import { AuthService} from './services/auth.service';
+
+
 
 @NgModule({
-  declarations: [
+    declarations: [
     AppComponent,
-    ListActivityComponent
-  ],
+    LoginComponent
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [
-    ActivityService,
-    EmployeeService
-
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
