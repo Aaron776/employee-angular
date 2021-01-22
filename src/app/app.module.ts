@@ -17,6 +17,11 @@ import { AuthService} from './services/auth.service';
     ],
 =======
 import { ListActivityComponent } from './list-activity/list-activity.component';
+<<<<<<< HEAD
+=======
+import {ActivityService} from './services/activity.service';
+import {EmployeeService}  from './services/employee.service';
+>>>>>>> master
 
 @NgModule({
   declarations: [
@@ -35,6 +40,14 @@ import { ListActivityComponent } from './list-activity/list-activity.component';
   providers: [
     AuthService
   ],
+<<<<<<< HEAD
+=======
+  providers: [
+    ActivityService,
+    EmployeeService
+
+  ],
+>>>>>>> master
   bootstrap: [AppComponent]
 })
 export class AppModule { }
