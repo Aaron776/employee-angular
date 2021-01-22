@@ -7,13 +7,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent} from './login/login.component';
 import { AuthService} from './services/auth.service';
 
+import { ListActivityComponent } from './list-activity/list-activity.component';
+import {ActivityService} from './services/activity.service';
+import {EmployeeService}  from './services/employee.service';
 
 
 @NgModule({
     declarations: [
     AppComponent,
+    ListActivityComponent,
     LoginComponent
-    ],
+  ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,7 +28,10 @@ import { AuthService} from './services/auth.service';
 
   ],
   providers: [
-    AuthService
+    AuthService,
+    ActivityService,
+    EmployeeService
+
   ],
   bootstrap: [AppComponent]
 })
