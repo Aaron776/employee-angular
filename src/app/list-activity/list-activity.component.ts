@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-/* import { ActivityModel } from '../models/activity.model'; */
+import { ActivityModel } from '../models/activity.model';
 import { ActivityService } from '../services/activity.service';
 import { Router } from '@angular/router';
 
@@ -14,8 +14,7 @@ export class ListActivityComponent implements OnInit {
   public ci: string | null;
   public name: string | null;
   public lastName: string | null;
-  /* public activities: ActivityModel[] = [];
-  public activity: ActivityModel = {}; */
+  public activities: ActivityModel[] = [];
 
 
   constructor(private rout: Router, private route: ActivatedRoute, private activityService: ActivityService) {
@@ -25,10 +24,10 @@ export class ListActivityComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    /* this.sync(); */
+    this.sync();
   }
 
-  /* sync(): void {
+  sync(): void {
     if (this.ci != null) {
       this.activityService.getAllActivitiesByEmployee(this.ci)
         .subscribe(
@@ -43,6 +42,6 @@ export class ListActivityComponent implements OnInit {
   navigateToActivity(activity: ActivityModel): void {
     this.rout.navigate(['/detail/' + activity.id]);
 
-  } */
+  }
 
 }
