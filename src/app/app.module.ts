@@ -13,7 +13,7 @@ import { EmployeeService } from './services/employee.service';
 import { DetailActivityComponent } from './detail-activity/detail-activity.component';
 
 @NgModule({
-  declarations: [
+    declarations: [
     AppComponent,
     ListActivityComponent,
     LoginComponent,
