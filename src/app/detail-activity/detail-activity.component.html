@@ -1,21 +1,34 @@
+
+<nav class="navbar  navbar-dark bg-dark" style="padding: 0px;">
+    <a class="navbar-brand" style="padding: 2px;"><img src="https://cdn.quizzclub.com/trivia/2019-04/como-fue-elegido-el-nombre-de-la-empresa-sueca-ikea.jpg" alt="" width="200px" height="70px" ></a>
+    <form class="form-inline" style="padding: 4px;">
+        <div style="margin-right: 20px;">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+    </div>
+      <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+  </nav>
+
+
+  
 <h1 style="text-align: center; margin-top:50px;">Detalle De La Actividad</h1>
-<div style="margin-left: 370px; ">
+<div style="margin-left: 270px;text-align: center;" >
     <div class="container-fluid">
         <br>
         <div class="row">
             <div class="col-md-8">
                 <div class="panel panel-default" style="text-align: center;">
                     <div class="panel panel-heading">Título:</div>
-                    <div class="panel-body"> {{activity.title}} </div>
-                    <div class="panel panel-heading">Descripción:</div>
-                    <div class="panel-body">{{activity.description}}
+                    <div class="panel-body" style=" border: 1px solid black;"> {{activity.title}} </div>
+                    <div class="panel panel-heading" style="margin-top: 15px;">Descripción:</div>
+                    <div class="panel-body" style=" border: 1px solid black;">{{activity.description}}
                     </div>
-                    <div class="panel panel-heading">Fecha:</div>
-                    <div class="panel-body"> {{activity.date}} </div>
-                    <div class="panel panel-heading">Mensaje:</div>
+                    <div class="panel panel-heading" style="margin-top: 15px;">Fecha:</div>
+                    <div class="panel-body" style=" border: 1px solid black;"> {{activity.date}} </div>
+                    <div class="panel panel-heading" style="margin-top: 15px;">Mensaje:</div>
                     <div class="panel-body">
                         <div class="form-group">
-                            <textarea type="text" class="form-control" [(ngModel)]="activity.message">
+                            <textarea type="text" class="form-control" [(ngModel)]="activity.message" style=" border: 1px solid black; text-align: center;">
                                 {{activity.message}}
                             </textarea>
                         </div>
