@@ -34,7 +34,7 @@ export class DetailActivityComponent implements OnInit {
 
   actualizar(): void {
     if (this.id != null) {
-      this.activityService.updateActivity(this.id, this.activity).subscribe();
+      this.activityService.updateActivity(this.id, this.activity).subscribe(data => alert(data));
     }
   }
 
